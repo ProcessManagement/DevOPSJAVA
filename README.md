@@ -1,2 +1,288 @@
 # DevOPSJAVA
 DevOPSJAVA is the internal environment to support Java Based Development Operations with in Erls
+
+#Windows Based [Dotnet] Vagrant Stacks
+
+Dotnet v3.5 Stacks
+
+VW7DotNet35IDS Windows7 (IIS, Dotnet, SQL Server)
+VW7DotNet35ADS Windows7 (Apache2, Dotnet, SQL Server)
+VW7DotNet35JDS Windows7 (JBOSS, Dotnet, SQL Server)
+VW7DotNet35IDM Windows7 (IIS, Dotnet, MySQL)
+VW7DotNet35ADM Windows7 (Apache2, Dotnet, MySQL)
+VW7DotNet35JDM Windows7 (JBOSS, Dotnet, MySQL)
+VW12DotNet35IDS Windows2012 (IIS, Dotnet, SQL Server)
+VW12DotNet35ADS Windows2012 (Apache2, Dotnet, SQL Server)
+VW12DotNet35JDS Windows2012 (JBOSS, Dotnet, SQL Server)
+VW12DotNet35IDM Windows2012 (IIS, Dotnet, MySQL)
+VW12DotNet35ADM Windows2012 (Apache2, Dotnet, MYSQL)
+VW12DotNet35JDM Windows2012 (JBOSS, Dotnet, MySQL)
+VW8DotNet35IDS Windows8 (IIS, Dotnet, SQL Server)
+
+Dotnet v4.0 Stacks
+
+VW7DotNet40IDS Windows7 (IIS, Dotnet, SQL Server)
+VW7DotNet40ADS Windows7 (Apache2, Dotnet, SQL Server)
+VW7DotNet40JDS Windows7 (JBOSS, Dotnet, SQL Server)
+VW7DotNet40IDM Windows7 (IIS, Dotnet, MySQL)
+VW7DotNet40ADM Windows7 (Apache2, Dotnet, MySQL)
+VW7DotNet40JDM Windows7 (JBOSS, Dotnet, MySQL)
+VW12DotNet40IDS Windows2012 (IIS, Dotnet, SQL Server)
+VW12DotNet40ADS Windows2012 (Apache2, Dotnet, SQL Server)
+VW12DotNet40JDS Windows2012 (JBOSS, Dotnet, SQL Server)
+VW12DotNet40IDM Windows2012 (IIS, Dotnet, MySQL)
+VW12DotNet40ADM Windows2012 (Apache2, Dotnet, MYSQL)
+VW12DotNet40JDM Windows2012 (JBOSS, Dotnet, MySQL)
+VW8DotNet40IDS Windows8 (IIS, Dotnet, SQL Server)
+
+Dotnet v4.5 Stacks
+
+VW7DotNet45IDS Windows7 (IIS, Dotnet, SQL Server)
+VW7DotNet45ADS Windows7 (Apache2, Dotnet, SQL Server)
+VW7DotNet45JDS Windows7 (JBOSS, Dotnet, SQL Server)
+VW7DotNet45IDM Windows7 (IIS, Dotnet, MySQL)
+VW7DotNet45ADM Windows7 (Apache2, Dotnet, MySQL)
+VW7DotNet45JDM Windows7 (JBOSS, Dotnet, MySQL)
+VW12DotNet45IDS Windows2012 (IIS, Dotnet, SQL Server)
+VW12DotNet45ADS Windows2012 (Apache2, Dotnet, SQL Server)
+VW12DotNet45JDS Windows2012 (JBOSS, Dotnet, SQL Server)
+VW12DotNet45IDM Windows2012 (IIS, Dotnet, MySQL)
+VW12DotNet45ADM Windows2012 (Apache2, Dotnet, MYSQL)
+VW12DotNet45JDM Windows2012 (JBOSS, Dotnet, MySQL)
+VW8DotNet45IDS Windows8 (IIS, Dotnet, SQL Server)
+
+Mono2.0 [Dotnet v4.0] Stacks
+
+VW7Mono40IDS Windows7 (IIS, Mono, SQL Server)
+VW7Mono40ADS Windows7 (Apache2, Mono, SQL Server)
+VW7Mono40JDS Windows7 (JBOSS, Mono, SQL Server)
+VW7Mono40IDM Windows7 (IIS, Mono, MySQL)
+VW7Mono40ADM Windows7 (Apache2, Mono, MySQL)
+VW7Mono40JDM Windows7 (JBOSS, Mono, MySQL)
+VW12Mono40IDS Windows2012 (IIS, Mono, SQL Server)
+VW12Mono40ADS Windows2012 (Apache2, Mono, SQL Server)
+VW12Mono40JDS Windows2012 (JBOSS, Mono, SQL Server)
+VW12Mono40IDM Windows2012 (IIS, Mono, MySQL)
+VW12Mono40ADM Windows2012 (Apache2, Mono, MYSQL)
+VW12Mono40JDM Windows2012 (JBOSS, Mono, MySQL)
+VW8Mono40IDS Windows8 (IIS, Mono, SQL Server)
+
+Mono2.5 [Dotnet v4.5] Stacks
+
+VW7Mono45IDS Windows7 (IIS, Mono, SQL Server)
+VW7Mono45ADS Windows7 (Apache2, Mono, SQL Server)
+VW7Mono45JDS Windows7 (JBOSS, Mono, SQL Server)
+VW7Mono45IDM Windows7 (IIS, Mono, MySQL)
+VW7Mono45ADM Windows7 (Apache2, Mono, MySQL)
+VW7Mono45JDM Windows7 (JBOSS, Mono, MySQL)
+VW12Mono45IDS Windows2012 (IIS, Mono, SQL Server)
+VW12Mono45ADS Windows2012 (Apache2, Mono, SQL Server)
+VW12Mono45JDS Windows2012 (JBOSS, Mono, SQL Server)
+VW12Mono45IDM Windows2012 (IIS, Mono, MySQL)
+VW12Mono45ADM Windows2012 (Apache2, Mono, MYSQL)
+VW12Mono45JDM Windows2012 (JBOSS, Mono, MySQL)
+VW8Mono45IDS Windows8 (IIS, Mono, SQL Server)
+
+JAVA v2.6 Stacks
+
+VW7JAVA35IDS Windows7 (IIS, JAVA, SQL Server)
+VW7JAVA35ADS Windows7 (Apache2, JAVA, SQL Server)
+VW7JAVA35JDS Windows7 (JBOSS, JAVA, SQL Server)
+VW7JAVA35IDM Windows7 (IIS, JAVA, MySQL)
+VW7JAVA35ADM Windows7 (Apache2, JAVA, MySQL)
+VW7JAVA35JDM Windows7 (JBOSS, JAVA, MySQL)
+VW12JAVA35IDS Windows2012 (IIS, JAVA, SQL Server)
+VW12JAVA35ADS Windows2012 (Apache2, JAVA, SQL Server)
+VW12JAVA35JDS Windows2012 (JBOSS, JAVA, SQL Server)
+VW12JAVA35IDM Windows2012 (IIS, JAVA, MySQL)
+VW12JAVA35ADM Windows2012 (Apache2, JAVA, MYSQL)
+VW12JAVA35JDM Windows2012 (JBOSS, JAVA, MySQL)
+VW8JAVA35IDS Windows8 (IIS, JAVA, SQL Server)
+
+JAVA v2.7 Stacks
+
+VW7JAVA40IDS Windows7 (IIS, JAVA, SQL Server)
+VW7JAVA40ADS Windows7 (Apache2, JAVA, SQL Server)
+VW7JAVA40JDS Windows7 (JBOSS, JAVA, SQL Server)
+VW7JAVA40IDM Windows7 (IIS, JAVA, MySQL)
+VW7JAVA40ADM Windows7 (Apache2, JAVA, MySQL)
+VW7JAVA40JDM Windows7 (JBOSS, JAVA, MySQL)
+VW12JAVA40IDS Windows2012 (IIS, JAVA, SQL Server)
+VW12JAVA40ADS Windows2012 (Apache2, JAVA, SQL Server)
+VW12JAVA40JDS Windows2012 (JBOSS, JAVA, SQL Server)
+VW12JAVA40IDM Windows2012 (IIS, JAVA, MySQL)
+VW12JAVA40ADM Windows2012 (Apache2, JAVA, MYSQL)
+VW12JAVA40JDM Windows2012 (JBOSS, JAVA, MySQL)
+VW8JAVA40IDS Windows8 (IIS, JAVA, SQL Server)
+
+JAVA v2.8 Stacks
+
+VW7JAVA45IDS Windows7 (IIS, JAVA, SQL Server)
+VW7JAVA45ADS Windows7 (Apache2, JAVA, SQL Server)
+VW7JAVA45JDS Windows7 (JBOSS, JAVA, SQL Server)
+VW7JAVA45IDM Windows7 (IIS, JAVA, MySQL)
+VW7JAVA45ADM Windows7 (Apache2, JAVA, MySQL)
+VW7JAVA45JDM Windows7 (JBOSS, JAVA, MySQL)
+VW12JAVA45IDS Windows2012 (IIS, JAVA, SQL Server)
+VW12JAVA45ADS Windows2012 (Apache2, JAVA, SQL Server)
+VW12JAVA45JDS Windows2012 (JBOSS, JAVA, SQL Server)
+VW12JAVA45IDM Windows2012 (IIS, JAVA, MySQL)
+VW12JAVA45ADM Windows2012 (Apache2, JAVA, MYSQL)
+VW12JAVA45JDM Windows2012 (JBOSS, JAVA, MySQL)
+VW8JAVA45IDS Windows8 (IIS, JAVA, SQL Server)
+
+PHP v5.4 Stacks
+
+VW7PHP54IDS Windows7 (IIS, PHP, SQL Server)
+VW7PHP54ADS Windows7 (Apache2, PHP, SQL Server)
+VW7PHP54JDS Windows7 (JBOSS, PHP, SQL Server)
+VW7PHP54IDM Windows7 (IIS, PHP, MySQL)
+VW7PHP54ADM Windows7 (Apache2, PHP, MySQL)
+VW7PHP54JDM Windows7 (JBOSS, PHP, MySQL)
+VW12PHP54IDS Windows2012 (IIS, PHP, SQL Server)
+VW12PHP54ADS Windows2012 (Apache2, PHP, SQL Server)
+VW12PHP54JDS Windows2012 (JBOSS, PHP, SQL Server)
+VW12PHP54IDM Windows2012 (IIS, PHP, MySQL)
+VW12PHP54ADM Windows2012 (Apache2, PHP, MYSQL)
+VW12PHP54JDM Windows2012 (JBOSS, PHP, MySQL)
+VW8PHP54IDS Windows8 (IIS, PHP, SQL Server)
+
+PHP v5.5 Stacks
+
+VW7PHP55IDS Windows7 (IIS, PHP, SQL Server)
+VW7PHP55ADS Windows7 (Apache2, PHP, SQL Server)
+VW7PHP55JDS Windows7 (JBOSS, PHP, SQL Server)
+VW7PHP55IDM Windows7 (IIS, PHP, MySQL)
+VW7PHP55ADM Windows7 (Apache2, PHP, MySQL)
+VW7PHP55JDM Windows7 (JBOSS, PHP, MySQL)
+VW12PHP55IDS Windows2012 (IIS, PHP, SQL Server)
+VW12PHP55ADS Windows2012 (Apache2, PHP, SQL Server)
+VW12PHP55JDS Windows2012 (JBOSS, PHP, SQL Server)
+VW12PHP55IDM Windows2012 (IIS, PHP, MySQL)
+VW12PHP55ADM Windows2012 (Apache2, PHP, MYSQL)
+VW12PHP55JDM Windows2012 (JBOSS, PHP, MySQL)
+VW8PHP55IDS Windows8 (IIS, PHP, SQL Server)
+
+PHP v5.7 Stacks
+
+VW7PHP57IDS Windows7 (IIS, PHP, SQL Server)
+VW7PHP57ADS Windows7 (Apache2, PHP, SQL Server)
+VW7PHP57JDS Windows7 (JBOSS, PHP, SQL Server)
+VW7PHP57IDM Windows7 (IIS, PHP, MySQL)
+VW7PHP57ADM Windows7 (Apache2, PHP, MySQL)
+VW7PHP57JDM Windows7 (JBOSS, PHP, MySQL)
+VW12PHP57IDS Windows2012 (IIS, PHP, SQL Server)
+VW12PHP57ADS Windows2012 (Apache2, PHP, SQL Server)
+VW12PHP57JDS Windows2012 (JBOSS, PHP, SQL Server)
+VW12PHP57IDM Windows2012 (IIS, PHP, MySQL)
+VW12PHP57ADM Windows2012 (Apache2, PHP, MYSQL)
+VW12PHP57JDM Windows2012 (JBOSS, PHP, MySQL)
+VW8PHP57IDS Windows8 (IIS, PHP, SQL Server)
+
+#Linux Based [Dotnet] Vagrant Stacks
+
+Mono2.0 [Dotnet v4.0] Stacks
+
+VU7Mono40AMO Ubontu15 (Apache2, Mono, Oracle)
+VU7Mono40JMO Ubontu15 (JBOSS, Mono, Oracle)
+VU7Mono40AMM Ubontu15 (Apache2, Mono, MySQL)
+VU7Mono40JMM Ubontu15 (JBOSS, Mono, MySQL)
+VU7Mono40AMD Ubontu15 (Apache2, Mono, DB2)
+VU7Mono40JMD Ubontu15 (JBOSS, Mono, DB2)
+VM7Mono40AMO MAC-OSX (Apache2, Mono, Oracle)
+VM7Mono40JMO MAC-OSX (JBOSS, Mono, Oracle)
+VM7Mono40AMM MAC-OSX (Apache2, Mono, MySQL)
+VM7Mono40JMM MAC-OSX (JBOSS, Mono, MySQL)
+VM7Mono40AMD MAC-OSX (Apache2, Mono, DB2)
+VM7Mono40JMD MAC-OSX (JBOSS, Mono, DB2)
+
+Mono2.5 [Dotnet v4.5] Stacks
+
+VU7Mono45AMO Ubontu15 (Apache2, Mono, Oracle)
+VU7Mono45JMO Ubontu15 (JBOSS, Mono, Oracle)
+VU7Mono45AMM Ubontu15 (Apache2, Mono, MySQL)
+VU7Mono45JMM Ubontu15 (JBOSS, Mono, MySQL)
+VU7Mono45AMD Ubontu15 (Apache2, Mono, DB2)
+VU7Mono45JMD Ubontu15 (JBOSS, Mono, DB2)
+VM7Mono45AMO MAC-OSX (Apache2, Mono, Oracle)
+VM7Mono45JMO MAC-OSX (JBOSS, Mono, Oracle)
+VM7Mono45AMM MAC-OSX (Apache2, Mono, MySQL)
+VM7Mono45JMM MAC-OSX (JBOSS, Mono, MySQL)
+VM7Mono45AMD MAC-OSX (Apache2, Mono, DB2)
+VM7Mono45JMD MAC-OSX (JBOSS, Mono, DB2)
+
+JAVA2.6 Stacks
+
+VU7JAVA40AMO Ubontu15 (Apache2, JAVA, Oracle)
+VU7JAVA40JMO Ubontu15 (JBOSS, JAVA, Oracle)
+VU7JAVA40AMM Ubontu15 (Apache2, JAVA, MySQL)
+VU7JAVA40JMM Ubontu15 (JBOSS, JAVA, MySQL)
+VU7JAVA40AMD Ubontu15 (Apache2, JAVA, DB2)
+VU7JAVA40JMD Ubontu15 (JBOSS, JAVA, DB2)
+VM7JAVA40AMO MAC-OSX (Apache2, JAVA, Oracle)
+VM7JAVA40JMO MAC-OSX (JBOSS, JAVA, Oracle)
+VM7JAVA40AMM MAC-OSX (Apache2, JAVA, MySQL)
+VM7JAVA40JMM MAC-OSX (JBOSS, JAVA, MySQL)
+VM7JAVA40AMD MAC-OSX (Apache2, JAVA, DB2)
+VM7JAVA40JMD MAC-OSX (JBOSS, JAVA, DB2)
+
+JAVA2.7 Stacks
+
+VU7JAVA45AMO Ubontu15 (Apache2, JAVA, Oracle)
+VU7JAVA45JMO Ubontu15 (JBOSS, JAVA, Oracle)
+VU7JAVA45AMM Ubontu15 (Apache2, JAVA, MySQL)
+VU7JAVA45JMM Ubontu15 (JBOSS, JAVA, MySQL)
+VU7JAVA45AMD Ubontu15 (Apache2, JAVA, DB2)
+VU7JAVA45JMD Ubontu15 (JBOSS, JAVA, DB2)
+VM7JAVA45AMO MAC-OSX (Apache2, JAVA, Oracle)
+VM7JAVA45JMO MAC-OSX (JBOSS, JAVA, Oracle)
+VM7JAVA45AMM MAC-OSX (Apache2, JAVA, MySQL)
+VM7JAVA45JMM MAC-OSX (JBOSS, JAVA, MySQL)
+VM7JAVA45AMD MAC-OSX (Apache2, JAVA, DB2)
+VM7JAVA45JMD MAC-OSX (JBOSS, JAVA, DB2)
+
+PHP5.4 Stacks
+
+VU7PHP54AMO Ubontu15 (Apache2, PHP, Oracle)
+VU7PHP54JMO Ubontu15 (JBOSS, PHP, Oracle)
+VU7PHP54AMM Ubontu15 (Apache2, PHP, MySQL)
+VU7PHP54JMM Ubontu15 (JBOSS, PHP, MySQL)
+VU7PHP54AMD Ubontu15 (Apache2, PHP, DB2)
+VU7PHP54JMD Ubontu15 (JBOSS, PHP, DB2)
+VM7PHP54AMO MAC-OSX (Apache2, PHP, Oracle)
+VM7PHP54JMO MAC-OSX (JBOSS, PHP, Oracle)
+VM7PHP54AMM MAC-OSX (Apache2, PHP, MySQL)
+VM7PHP54JMM MAC-OSX (JBOSS, PHP, MySQL)
+VM7PHP54AMD MAC-OSX (Apache2, PHP, DB2)
+VM7PHP54JMD MAC-OSX (JBOSS, PHP, DB2)
+
+PHP5.5 Stacks
+
+VU7PHP55AMO Ubontu15 (Apache2, PHP, Oracle)
+VU7PHP55JMO Ubontu15 (JBOSS, PHP, Oracle)
+VU7PHP55AMM Ubontu15 (Apache2, PHP, MySQL)
+VU7PHP55JMM Ubontu15 (JBOSS, PHP, MySQL)
+VU7PHP55AMD Ubontu15 (Apache2, PHP, DB2)
+VU7PHP55JMD Ubontu15 (JBOSS, PHP, DB2)
+VM7PHP55AMO MAC-OSX (Apache2, PHP, Oracle)
+VM7PHP55JMO MAC-OSX (JBOSS, PHP, Oracle)
+VM7PHP55AMM MAC-OSX (Apache2, PHP, MySQL)
+VM7PHP55JMM MAC-OSX (JBOSS, PHP, MySQL)
+VM7PHP55AMD MAC-OSX (Apache2, PHP, DB2)
+VM7PHP55JMD MAC-OSX (JBOSS, PHP, DB2)
+
+PHP5.7 Stacks
+
+VU7PHP57AMO Ubontu15 (Apache2, PHP, Oracle)
+VU7PHP57JMO Ubontu15 (JBOSS, PHP, Oracle)
+VU7PHP57AMM Ubontu15 (Apache2, PHP, MySQL)
+VU7PHP57JMM Ubontu15 (JBOSS, PHP, MySQL)
+VU7PHP57AMD Ubontu15 (Apache2, PHP, DB2)
+VU7PHP57JMD Ubontu15 (JBOSS, PHP, DB2)
+VM7PHP57AMO MAC-OSX (Apache2, PHP, Oracle)
+VM7PHP57JMO MAC-OSX (JBOSS, PHP, Oracle)
+VM7PHP57AMM MAC-OSX (Apache2, PHP, MySQL)
+VM7PHP57JMM MAC-OSX (JBOSS, PHP, MySQL)
+VM7PHP57AMD MAC-OSX (Apache2, PHP, DB2)
+VM7PHP57JMD MAC-OSX (JBOSS, PHP, DB2)
+
