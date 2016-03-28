@@ -1,0 +1,12 @@
+[submodule "manifests/modules/java"]
+	path = manifests/modules/java
+	url = https://github.com/puppetlabs/puppetlabs-java.git
+[submodule "manifests/modules/stdlib"]
+	path = manifests/modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "manifests/modules/maven"]
+	path = manifests/modules/maven
+	url = https://github.com/maestrodev/puppet-maven.git
+[submodule "manifests/modules/wget"]
+	path = manifests/modules/wget
+	url = https://github.com/maestrodev/puppet-wget.git

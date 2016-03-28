@@ -1,0 +1,44 @@
+<project name="projectname" default="build" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant" >
+
+<property name="jarname" value="somefile.jar" />
+
+
+<target name="help">
+    <echo message="Common build targets:" />
+    <echo message="jar         - Builds ${jarname}" />
+    <echo message="build       - Same as clean+jar" />
+    <echo message="compile     - Compile" />
+    <echo message="clean       - Cleans the project" />
+</target>
+
+<property file="build.properties"/>
+<property name="buildDir" value="build" />
+
+<target name="build" depends="clean,jar"/>
+
+<target name="resolve">
+	<ivy:resolve file="ivy.xml" />
+	<ivy:cachepath pathid="compile.classpath" />
+</target>
+
+<target name="jar" depends="compile">
+    <jar
+        jarfile="lib/${jarname}">
+        <fileset dir="classes"/>
+    </jar>
+</target>
+
+<target name="compile">
+    <mkdir dir="classes"/>
+    <javac
+        srcdir="src"
+        destdir="classes"
+        classpathref="compile.classpath"/>
+</target>
+
+<target name="clean">
+    <delete dir="classes"/>
+	<delete file="lib/${jarname}" />
+</target>
+
+</project>

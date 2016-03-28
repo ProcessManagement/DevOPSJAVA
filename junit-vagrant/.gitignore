@@ -1,0 +1,9 @@
+.classpath
+.project
+.settings
+.vagrant
+*.o
+git.properties
+target
+*.iml
+.idea

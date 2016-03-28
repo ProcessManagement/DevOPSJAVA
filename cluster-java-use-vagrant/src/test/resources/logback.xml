@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <property resource="logback.properties"/>
+
+    <!-- 控制台日志输出设置 -->
+    <appender name="CONSOLE-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%t] %-5p [%c:%L] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logger.dir}/default.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logger.dir}/default-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>30MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d [%t] %-5p [%c:%L] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="TEST-FILE-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>false</append>
+        <file>${logger.dir}/test.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logger.dir}/test-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>30MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d [%t] %-5p [%c:%L] - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.easou.infra.vipbookcp.cpinterface.test" level="DEBUG">
+        <appender-ref ref="TEST-FILE-APPENDER"/>
+    </logger>
+
+    <logger name="org.springframework" additivity="false" level="warn">
+        <appender-ref ref="CONSOLE-APPENDER"/>
+    </logger>
+
+    <logger name="org.mybatis" additivity="false" level="warn">
+        <appender-ref ref="CONSOLE-APPENDER"/>
+    </logger>
+
+    <logger name="org.apache.http" additivity="false" level="warn">
+        <appender-ref ref="CONSOLE-APPENDER"/>
+    </logger>
+
+    <logger name="com.meread.buildenv.test.Test" additivity="false" level="info">
+        <appender-ref ref="TEST-FILE-APPENDER"/>
+        <appender-ref ref="CONSOLE-APPENDER"/>
+    </logger>
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE-APPENDER"/>
+        <appender-ref ref="FILE-APPENDER"/>
+    </root>
+
+</configuration>

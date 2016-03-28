@@ -1,0 +1,13 @@
+---
+- name: download key
+  apt_key: url=http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key state=present
+  
+- name: add entry to source
+  apt_repository: repo='deb http://pkg.jenkins-ci.org/debian binary/' state=present
+  
+- name: Update apt
+  apt: update_cache=yes
+  
+
+- name: Install Jenkins Debian packages
+  apt: name=jenkins state=latest 

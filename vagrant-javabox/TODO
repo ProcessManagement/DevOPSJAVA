@@ -1,0 +1,8 @@
+Need to have provision.sh use intelliJ/eclipse/both
+
+Need to have .bashrc be dynamic depending on packages installed (java versions, ide)
+
+The templates for the .bashrc changes should be split into individual updates.
+
+If we install Ant it should be setup for Altura.  Again it should be optional.
+

@@ -1,0 +1,12 @@
+Inspired by:
+
+http://blogs.atlassian.com/2013/03/instant-java-provisioning-with-vagrant-and-puppet-stash-one-click-install/
+
+Installs Oracle java 8 including eclipse.
+
+SSH X forwarding enabled, 
+vagrant ssh and start eclipse with ./eclipse/eclipse
+
+The /workspace directory on the host machine is a suitable place for your
+eclipse workspace, have fun! You can then use commandline version control tools
+to manager your commits.

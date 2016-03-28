@@ -1,0 +1,6 @@
+dummy folder and default.pp needed
+
+since vagrant checks for this and does not run
+
+this will not be picked up though , the correct files configured in Vagrantfile will 
+be picked up

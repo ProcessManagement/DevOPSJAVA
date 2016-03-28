@@ -1,0 +1,84 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+  <filter>
+    <filter-name>gzip</filter-name>
+    <filter-class>org.eclipse.jetty.servlets.GzipFilter</filter-class>
+  </filter>
+
+  <!-- Make sure spring knows where the applicationContext is -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+
+  <!-- Bind Spring to Jersey -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener
+    </listener-class>
+  </listener>
+
+  <!-- Security -->
+  <filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy
+    </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <servlet-name>rest</servlet-name>
+  </filter-mapping>
+
+  <!-- Define our Jersey servlet container -->
+  <servlet>
+    <servlet-name>rest</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+
+    <!-- Reference our app -->
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>
+        com.nthalk.light.resources,
+        com.wordnik.swagger.jersey.listing
+      </param-value>
+    </init-param>
+  </servlet>
+
+  <!-- Map our Jersey servlet to handle all rest urls -->
+  <servlet-mapping>
+    <servlet-name>rest</servlet-name>
+    <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+
+  <!-- WebSocket -->
+  <servlet>
+    <servlet-name>websockets</servlet-name>
+    <servlet-class>org.cometd.server.CometDServlet</servlet-class>
+    <async-supported>true</async-supported>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>websockets</servlet-name>
+    <url-pattern>/ws/*</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.nthalk.light.websocket.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!-- Documentation -->
+  <servlet>
+    <servlet-name>JerseyJaxrsConfig</servlet-name>
+    <servlet-class>com.wordnik.swagger.jersey.config.JerseyJaxrsConfig
+    </servlet-class>
+    <init-param>
+      <param-name>swagger.api.basepath</param-name>
+      <param-value>/rest/api</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JerseyJaxrsConfig</servlet-name>
+    <url-pattern>/unnecessary-swagger</url-pattern>
+  </servlet-mapping>
+</web-app>
+

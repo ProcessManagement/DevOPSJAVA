@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure(2) do |config|
+  
+  config.vm.box = "ubuntu/trusty64"
+
+  # PostgreSQL Server port forwarding
+  config.vm.network "forwarded_port", guest: 5432, host: 15432
+
+  # Tomcat Server port forwarding
+  config.vm.network "forwarded_port", guest: 8080, host: 4567
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
+  #Apache Tomcat webapps folder
+  config.vm.synced_folder "./webapps", "/opt/tomcat7/webapps"
+end

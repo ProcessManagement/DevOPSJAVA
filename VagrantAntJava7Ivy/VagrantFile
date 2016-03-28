@@ -1,0 +1,21 @@
+Vagrant.configure(2) do |config|
+  #This speeds up subsequent provisions by creating an apt-cache on the host
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
+  config.vm.define "web" do |web|
+    config.vm.provider :virtualbox do |v|
+      v.memory = 2048
+      v.cpus = 2
+    end
+    web.vm.box = "larryli/wily64"
+    web.vm.network "forwarded_port", guest: 80, host: 8080
+	web.vm.synced_folder "project", "/home/vagrant/project"
+	web.vm.synced_folder "ivy_cache", "/home/vagrant/.ivy2/cache"
+	
+    web.vm.provision "shell", inline: <<-SHELL
+    	apt-get install -y openjdk-7-jdk ant ivy
+      ln -s /usr/share/java/ivy-2.3.0.jar /usr/share/ant/lib/ivy.jar
+    SHELL
+  end
+end

@@ -1,0 +1,54 @@
+
+# Start of vagrant provisioning template
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+BIN_DIR="$HOME/bin"
+export PATH="$BIN_DIR/apache-maven/bin:$BIN_DIR/apache-ant/bin:$PATH"
+
+#export PATH="$BIN_DIR/eclipse/bin:$PATH"
+export PATH="$BIN_DIR/idea-IC-143.382.35/bin:$PATH"
+
+export ANDROID_HOME="$BIN_DIR/android-sdk-linux"
+export PATH="${ANDROID_HOME}/tools:$PATH"
+export PATH="${ANDROID_HOME}/platform-tools:$PATH"
+
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+function jdebug_set() {
+    jenv shell-options "$JENV_OPTIONS -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n"
+}
+
+function jdebug_unset() {
+    jenv shell-options --unset
+}
+
+function gc_set() {
+    jenv shell-options "$JENV_OPTIONS -XX:+PrintGCDetails -Xloggc:gc.log"
+}
+
+function gc_unset() {
+    jenv shell-options --unset
+}
+
+function jrebel_set() {
+    jenv shell-options "$JENV_OPTIONS -javaagent:$BIN_DIR/jrebel/jrebel.jar -noverify"
+}
+
+function jrebel_unset() {
+    jenv shell-options --unset
+}
+
+function jprofiler_set() {
+    jenv shell-options "$JENV_OPTIONS -javaagent:$BIN_DIR/jprofiler/bin/agent.jar"
+}
+
+function jprofiler_unset() {
+    jenv shell-options --unset
+}
+
+# End of vagrant provisioning template

@@ -1,0 +1,12 @@
+Vagrant::Config.run do |config|
+    config.vm.box = "precise64"
+    config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+    config.vm.network :hostonly, "10.0.0.2"
+    config.vm.host_name = "play-app.local"
+
+    config.vm.share_folder "web-app", "/vagrant", "./../", 
+        :owner => "www-data", :group => "www-data"
+        
+    config.vm.provision :shell, :path => "provision.sh"
+end

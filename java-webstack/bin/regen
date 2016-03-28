@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd rest-service
+
+mvn jooq-codegen:generate

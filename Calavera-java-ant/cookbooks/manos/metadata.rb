@@ -1,0 +1,12 @@
+name             'manos'
+maintainer       'Charles Betz'
+maintainer_email 'char@erp4it.com'
+license          'MIT'
+description      'Installs/Configures manos dev wks'
+long_description 'Installs/Configures manos dev wks'
+version          '0.3.0'
+
+depends           'apt'
+depends           'tomcat'
+depends           'localAnt'
+depends           'git'

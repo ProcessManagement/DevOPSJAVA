@@ -1,0 +1,57 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+
+  vmbox = "fedora17"
+  vmboxurl = "https://raw.github.com/jayunit100/rudolf_web/master/public/fedora-17.box"
+  gluster_repo="http://download.gluster.org/pub/gluster/glusterfs/LATEST/Fedora/fedora-17/x86_64/glusterfs-server-3.3.1-1.fc17.x86_64.rpm"
+  #vagrant box add fedora17 /Users/jayunit100/Development/rudolf_web/public/fedora-17.box
+  gluster_file ="glusterfs-server-3.3.1-1.fc17.x86_64.rpm"  
+
+  config.vm.define :gluster1 do |gluster1|
+    gluster1.vm.box = vmbox
+    #gluster1.vm.box_url = vmboxurl
+    gluster1.vm.host_name = "gluster1"
+    gluster1.vm.network :hostonly, "192.168.33.10"
+    gluster1.vm.provision :shell, :inline => "wget #{gluster_repo}"
+    gluster1.vm.provision :shell, :inline => "sudo dpkg -i #{gluster_file}"
+    gluster1.vm.provision :shell, :inline => "sudo service glusterd start"
+    gluster1.vm.provision :shell, :inline => "sudo mkdir -p /srv/brick{1,2,3,4} /mnt/point{1,2}"
+    gluster1.vm.provision :shell, :inline => "echo sudo mount -t glusterfs 127.0.0.1:/gv1 /mnt/point1 >> .bashrc"
+    gluster1.vm.provision :shell, :inline => "echo sudo mount -t glusterfs 127.0.0.1:/gv2 /mnt/point2 >> .bashrc"
+ 
+ end
+
+  config.vm.define :gluster2 do |gluster2|
+    gluster2.vm.box = vmbox
+    #gluster2.vm.box_url = vmboxurl
+    gluster2.vm.host_name = "gluster2"
+    gluster2.vm.network :hostonly, "192.168.33.11"
+    gluster2.vm.provision :shell, :inline => "wget #{gluster_repo}"
+    gluster2.vm.provision :shell, :inline => "sudo dpkg -i #{gluster_file}"
+    gluster2.vm.provision :shell, :inline => "sudo service glusterd start"
+    gluster2.vm.provision :shell, :inline => "sudo mkdir -p /srv/brick{1,2,3,4} /mnt/point{1,2}"
+
+    gluster2.vm.provision :shell, :inline => "echo sudo mount -t glusterfs 127.0.0.1:/gv1 /mnt/point1 >> .bashrc"
+    gluster2.vm.provision :shell, :inline => "echo sudo mount -t glusterfs 127.0.0.1:/gv2 /mnt/point2 >> .bashrc"
+    gluster2.vm.provision :shell, :inline => "sudo gluster peer probe 192.168.33.10"
+    gluster2.vm.provision :shell, :inline => "sudo gluster peer probe 192.168.33.11"
+
+    gluster2.vm.provision :shell, :inline => "sudo gluster volume create gv1 replica 1 192.168.33.10:/srv/brick1 192.168.33.11:/srv/brick1"
+    gluster2.vm.provision :shell, :inline => "sudo gluster volume create gv2 replica 2 192.168.33.10:/srv/brick2 192.168.33.11:/srv/brick2" 
+
+    gluster2.vm.provision :shell, :inline => "sudo gluster volume start gv1"
+    gluster2.vm.provision :shell, :inline => "sudo gluster volume start gv2"
+
+    gluster2.vm.provision :shell, :inline => "sudo mount -t glusterfs 127.0.0.1:/gv1 /mnt/point1"
+    gluster2.vm.provision :shell, :inline => "sudo mount -t glusterfs 127.0.0.1:/gv2 /mnt/point2"
+
+    gluster2.vm.provision :shell, :inline => "for i in `seq -w 1 100`; do sudo cp -rp /var/log/syslog /mnt/point1/copy-test-$i; done"
+    gluster2.vm.provision :shell, :inline => "for i in `seq -w 1 100`; do sudo cp -rp /var/log/syslog /mnt/point2/copy-test-$i; done"
+  
+end
+
+  
+
+end

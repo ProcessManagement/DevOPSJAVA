@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'java', '1.8.2'
+cookbook 'maven'
+cookbook 'git'
+cookbook 'xfce4'
+cookbook 'firefox'
+cookbook 'idea'

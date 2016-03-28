@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: Installing GCC
+      apt: name=gcc update_cache=yes
+    - name: Installing Make
+      apt: name=make update_cache=yes
+    - name: Installing OpenJDK7
+      apt: name=openjdk-7-jdk update_cache=yes
+    - name: Installing Maven
+      apt: name=maven update_cache=yes install_recommends=no

@@ -1,0 +1,8 @@
+*
+!.gitignore
+!Vagrantfile
+!README.md
+!vagrant_config
+!vagrant_config/deploy_docker.sh
+!vagrant_config/deploy_mvn.sh
+!vagrant_config/settings.xml

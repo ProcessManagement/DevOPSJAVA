@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.nthalk</groupId>
+    <artifactId>light</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>web-client</artifactId>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <!-- Js Deps: WebJars-->
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-servlet-2.x</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>react</artifactId>
+      <version>0.13.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>3.3.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>react-bootstrap</artifactId>
+      <version>0.23.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>react-router</artifactId>
+      <version>0.13.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>cometd-jquery</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>cometd</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+  </dependencies>
+</project>

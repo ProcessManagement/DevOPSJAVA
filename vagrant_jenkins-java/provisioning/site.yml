@@ -1,0 +1,13 @@
+---
+- name: Prepare basic env for symfony2 app on all nodes
+  hosts: all
+  remote_user: vagrant
+  sudo: yes
+  vars_files:
+    - ../.project.yml
+    - variables.yml
+  roles:
+    - tools
+    - java
+    - jenkins
+   

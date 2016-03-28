@@ -1,0 +1,5 @@
+#staging files
+files/
+
+#Vagrant config
+.vagrant/

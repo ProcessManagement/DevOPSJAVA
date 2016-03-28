@@ -1,0 +1,6 @@
+hello hadoop
+hello world
+hello yangxg
+bye hadoop
+bye world
+bye yangxg

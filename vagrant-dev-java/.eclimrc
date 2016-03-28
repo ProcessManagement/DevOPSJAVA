@@ -1,0 +1,2 @@
+osgi.instance.area.default=@user.home/eclipse/workspace
+nailgun.server.port=9091

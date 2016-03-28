@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+  #config.vm.define :slave do |slave_config|
+  #  slave_config.vm.customize ["modifyvm", :id, "--name", "Hadoop Slave", "--memory", 1024]
+  #  slave_config.vm.box = "base-hadoop"
+    ##slave_config.vm.forward_port 90, 9090
+  #  slave_config.vm.network :hostonly, "10.10.10.51"
+    ##slave_config.vm.provision :puppet
+  #	slave_config.ssh.forward_agent = true
+  #end
+  config.vm.define :master do |master_config|
+    master_config.vm.customize ["modifyvm", :id, "--name", "Hadoop Master", "--memory", 1300]
+    master_config.vm.box = "fedora17"
+    #master_config.vm.forward_port 80, 8080
+    master_config.vm.network :hostonly, "10.10.10.50"
+    #master_config.vm.provision :puppet
+    master_config.ssh.forward_agent = true
+    #master_config.vm.provision :shell, :path => "hadoop_start.sh"
+  config.vm.provision :shell, :path => "hadoop.sh"
+  # Forward a port from the guest to the host, which allows for outside
+  #   # computers to access the VM, whereas host only networking does not.
+  #     # config.vm.forward_port 80, 8080
+  #
+  #       # Share an additional folder to the guest VM. The first argument is
+  #         # an identifier, the second is the path on the guest to mount the
+  #           # folder, and the third is the path on the host to the actual folder.
+  #             config.vm.share_folder "MyDevelopmentEnvironment","~/Development", "~/Development/"
+  #
+
+  end
+end

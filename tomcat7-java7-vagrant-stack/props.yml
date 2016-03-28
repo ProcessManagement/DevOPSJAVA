@@ -1,0 +1,12 @@
+# properties.yml
+
+aws.access_key_id : "<replace>"
+aws.secret_access_key : "<replace>"
+aws.keypair_name : "Imm Charu"
+aws.instance_type : "t1.micro"
+aws.region : "us-east-1<replace>"
+aws.subnet_id : "subnet-<replace>"
+aws.security_groups : "sg-<replace>"
+aws.ami : "ami-<replace>"
+override.ssh.username : "<replace>"
+override.ssh.private_key_path : "<replace>.pem"

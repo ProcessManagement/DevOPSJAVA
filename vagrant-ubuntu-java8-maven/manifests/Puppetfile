@@ -1,0 +1,7 @@
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppetlabs/apt', '1.4.2'
+mod 'puppetlabs/stdlib', '3.2.1'
+mod 'puppetlabs/mysql', '3.6.1'
+mod 'maestrodev/maven', '1.1.11'
+mod 'maestrodev/wget', '1.4.1'

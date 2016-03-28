@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+
+  config.vm.define "app" do |app|
+    app.vm.box = "precise64"
+    app.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210-nocm.box"
+  end 
+
+  config.vm.provision :shell, path: "oracle-java-7.sh"
+end
+

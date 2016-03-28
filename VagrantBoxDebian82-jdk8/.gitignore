@@ -1,0 +1,5 @@
+.vagrant
+customization/ssh-keys/
+*.swp
+customization/*.tgz
+customization/bash_aliases

@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+    <info organisation="org.apache" module="modulename"/>
+    <configurations>
+	</configurations>
+	<publications>
+	</publications>
+	<dependencies>
+		<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="2.49.1"/>
+    </dependencies>
+</ivy-module>

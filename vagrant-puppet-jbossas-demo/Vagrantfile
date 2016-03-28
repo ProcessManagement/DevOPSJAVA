@@ -1,0 +1,13 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "precise64"
+  config.vm.hostname = "jboss-as"
+
+  config.vm.network :forwarded_port, host: 8080, guest: 8080
+  config.vm.network :forwarded_port, host: 9990, guest: 9990
+
+  config.vm.provision :puppet, :module_path => "./modules", :options => ["--fileserverconfig=/vagrant/fileserver.conf",]
+  config.vm.synced_folder "modules", "/etc/puppet/modules"
+  config.vm.synced_folder "files", "/etc/puppet/files"
+end

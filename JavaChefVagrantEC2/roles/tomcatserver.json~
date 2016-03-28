@@ -1,0 +1,22 @@
+{
+  "name": "tomcatserver",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "webapp": {
+      "webapp": "demo.war"
+    },
+    "tomcat": {
+      "port": "8081"
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[webapp]"
+  ],
+  "env_run_lists": {
+  }
+}

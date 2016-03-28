@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+        <property>
+                <name>dfs.name.dir</name>
+                <value>/home/vagrant/HDFS/name</value>
+        </property>
+        <property>
+                <name>dfs.permissions</name>
+                <value>False</value>
+        </property>
+        <property>
+                <name>dfs.data.dir</name>
+                <value>/home/vagrant/HDFS/data</value>
+        </property>
+        <property>
+                <name>dfs.block.size</name>
+                <value>64M</value>
+        </property>
+        <property>
+                <name>dfs.replication</name>
+                <value>1</value>
+        </property>
+
+</configuration>
